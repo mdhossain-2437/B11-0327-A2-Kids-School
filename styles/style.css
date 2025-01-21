@@ -6,7 +6,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-image: url("../assets/bg.png");
+  min-width: 100vh;
 }
 
 nav {
@@ -17,9 +17,9 @@ nav {
   align-items: center;
   margin: 10px 7vw;
 }
-.hamburger{
-   display: none;
-} 
+.hamburger {
+  display: none;
+}
 
 nav > .logo {
   display: flex;
@@ -45,6 +45,9 @@ nav ul li {
   list-style-type: none;
 }
 
+.menu {
+  font-size: 1rem;
+}
 nav ul li a {
   text-decoration: none;
 }
@@ -66,7 +69,7 @@ nav ul li a {
 .contact-btn {
   background-color: orange;
   color: white;
-  padding: 10px 20px;
+  padding: 10px 40px;
   font-size: 1rem;
   border: none;
   border-radius: 10px;
@@ -74,30 +77,77 @@ nav ul li a {
 
 /* hero */
 
-.hero{
-   display: flex;
-   flex: 1;
-   border: #000 1px solid;
-   margin: 10px 7vw;
-}
+.hero {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 7vw;
+  align-items: center;
 }
 
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-top: 20px;
+}
+
+.hero-img {
+  width: 17.5rem;
+  height: 21.25rem;
+}
+
+.hero-btn {
+  background-color: black;
+  color: white;
+  padding: 10px 40px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+/* standard curriculum */
+main {
+  background-image: url("../assets/bg.png");
+}
 
 /* Mobile view */
-@media (max-width: 768px) {
-   .menu {
-       display: none;
-   }
-.logo> h1{
-   display: none;
-}
-   .hamburger {
-       display: block;
-       font-size: 30px;
-       color: #000;
-   }
+@media (max-width: 576px) {
+  .menu {
+    display: none;
+  }
+  .logo > h1 {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+    font-size: 30px;
+    color: #000;
+  }
 
-   nav {
-       justify-content: space-between;
-       padding: 10px;
-   }
+  nav {
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: orange 1px solid;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .hero-text {
+    padding: 0 auto;
+  }
+
+  .hero-img {
+    width: 200px;
+    height: 250px;
+  }
+}
