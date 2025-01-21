@@ -46,7 +46,7 @@ nav ul li {
 }
 
 .menu {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 nav ul li a {
   text-decoration: none;
@@ -65,6 +65,9 @@ nav ul li a {
 
 .blue {
   color: #5d58ef;
+}
+.pink {
+  color: #a44aa0;
 }
 .contact-btn {
   background-color: orange;
@@ -113,10 +116,109 @@ nav ul li a {
 /* standard curriculum */
 main {
   background-image: url("../assets/bg.png");
+  background-size: cover;
+  opacity: 0.9;
+}
+
+.curriculum {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin: 10px 7vw;
+  align-items: center;
+}
+
+.curriculum-item {
+  text-align: center;
+  background-color: white;
+  flex-basis: 30%;
+  padding: 50px 30px;
+  flex: 1;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 1.7rem;
+  margin: 20px 0;
+}
+
+.sub-title {
+  font-size: 1rem;
+  margin: 20px 0;
+}
+.standard-curriculum > h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin: 50px 0;
+  text-align: center;
+}
+
+.btn {
+  background-color: white;
+  font-size: 1.2rem;
+  border: none;
+}
+.curriculum-item > img {
+  width: 100px;
+  height: 100px;
+}
+
+.sky-blue-item {
+  background: rgb(125, 203, 246);
+  background: linear-gradient(
+    180deg,
+    rgba(184, 230, 255, 0.756) 0%,
+    rgba(255, 255, 255, 1) 25%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+.orange-item {
+  background: rgb(236, 186, 132);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 209, 160, 0.783) 0%,
+    rgba(255, 255, 255, 1) 25%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+.pink-item {
+  background: rgb(202, 146, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(202, 146, 255, 0.27727587617078087) 0%,
+    rgba(255, 255, 255, 1) 25%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+.arow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.icon-size {
+  text-align: center;
+  font-size: 60px;
+  color: #ffa500;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.icon-size:hover {
+  color: #ed612e;
+  transform: scale(1.2);
 }
 
 /* Mobile view */
 @media (max-width: 576px) {
+  .main {
+    padding: 0;
+    max-width: 90vw;
+  }
   .menu {
     display: none;
   }
@@ -132,7 +234,8 @@ main {
   nav {
     justify-content: space-between;
     padding: 10px;
-    border-bottom: orange 1px solid;
+    border-bottom: #ffa500 1px solid;
+    margin: 0;
   }
 
   .hero {
@@ -140,6 +243,8 @@ main {
     text-align: center;
     justify-content: center;
     padding: 10px;
+    min-width: 90vw;
+    margin: 0;
   }
 
   .hero-text {
@@ -149,5 +254,19 @@ main {
   .hero-img {
     width: 200px;
     height: 250px;
+  }
+
+  .curriculum {
+    flex-direction: column;
+    gap: 20px;
+    min-width: 90vw;
+    margin: 0;
+  }
+  .curriculum-item {
+    flex-basis: 100%;
+    padding: 30px;
+  }
+  .arow {
+    display: none;
   }
 }
