@@ -335,6 +335,82 @@ main {
   padding-top: 30px;
   padding-bottom: 40px;
 }
+
+footer {
+  background-color: #01acfd;
+}
+
+.footer-container {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+  padding: 80px;
+  color: white;
+  flex: 1;
+
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer-logo {
+  display: flex;
+  align-items: end;
+  margin-bottom: 20px;
+}
+.footer-container span {
+  font-size: 36px;
+  font-weight: bold;
+}
+.footer-container img {
+  width: 90px;
+  height: 90px;
+}
+.footer-container {
+  font-size: 1rem;
+  padding-bottom: 20px;
+  line-height: 1.4;
+}
+.about {
+  display: flex;
+  flex-direction: column;
+}
+
+.about > h3 {
+  display: block;
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.about ul li {
+  list-style-type: none;
+  padding-top: 15px;
+  font-size: 1rem;
+}
+.about a {
+  color: white;
+  text-decoration: none;
+}
+.keep-in-touch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.keep-in-touch > h3 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.social-icons img {
+  width: 40px;
+  height: 40px;
+}
+
 /* Mobile view */
 @media (max-width: 576px) {
   .main {
@@ -373,9 +449,9 @@ main {
     padding: 0 auto;
   }
 
-  .hero-img {
-    width: 200px;
-    height: 250px;
+  .hero-image > img {
+    width: 400px;
+    height: 500px;
   }
 
   .curriculum {
@@ -428,5 +504,12 @@ main {
   .our-story-btn {
     width: max-content;
     font-size: 12px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+    padding: 30px;
   }
 }
