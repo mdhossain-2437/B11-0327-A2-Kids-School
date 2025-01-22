@@ -1,3 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 300 to 700
+
+.quicksand-font {
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +13,10 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Quicksand", serif, Arial, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
 }
 
 nav {
@@ -342,7 +353,6 @@ footer {
 
 .footer-container {
   display: flex;
-  /* align-items: center; */
   justify-content: space-between;
   padding: 80px;
   color: white;
@@ -411,6 +421,22 @@ footer {
   height: 40px;
 }
 
+.marquee {
+  background-color: #000;
+  color: greenyellow;
+  font-size: 26px;
+  padding-top: 5px;
+  position: relative;
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+  font-family: Dusha V5;
+}
+@font-face {
+  font-family: Dusha V5;
+  src: url(../assets/Dusha\ V5\ Regular.ttf);
+}
+
 /* Mobile view */
 @media (max-width: 576px) {
   .main {
@@ -450,8 +476,8 @@ footer {
   }
 
   .hero-image > img {
-    width: 400px;
-    height: 500px;
+    width: 370px;
+    height: 405px;
   }
 
   .curriculum {
@@ -476,7 +502,10 @@ footer {
     justify-content: center;
     width: 90%;
   }
-
+  .item {
+    width: 100%;
+    height: auto;
+  }
   .item-1 {
     display: none;
   }
@@ -503,7 +532,7 @@ footer {
 
   .our-story-btn {
     width: max-content;
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .footer-container {
@@ -511,5 +540,20 @@ footer {
     align-items: start;
     gap: 10px;
     padding: 30px;
+  }
+
+  .footer-logo {
+    align-items: end;
+    justify-content: start;
+    margin-bottom: 20px;
+  }
+  .footer-logo > span {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .grid-container {
+    gap: 10px;
+    margin: 0 auto;
+    padding: 0 auto;
   }
 }
